@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="vetapp.list">
+      <field name="name">vetapp list</field>
+      <field name="model">vetapp.vetapp</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="vetapp.action_window">
+      <field name="name">vetapp window</field>
+      <field name="res_model">vetapp.vetapp</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="vetapp.action_server">
+      <field name="name">vetapp server</field>
+      <field name="model_id" ref="model_vetapp_vetapp"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="vetapp" id="vetapp.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="vetapp.menu_1" parent="vetapp.menu_root"/>
+    <menuitem name="Menu 2" id="vetapp.menu_2" parent="vetapp.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="vetapp.menu_1_list" parent="vetapp.menu_1"
+              action="vetapp.action_window"/>
+    <menuitem name="Server to list" id="vetapp" parent="vetapp.menu_2"
+              action="vetapp.action_server"/>
+-->
+  </data>
+</odoo>
