@@ -1,7 +1,8 @@
 {
 # -*- coding: utf-8 -*-
 {
-    'name': "davids app",
+    'name': "davids app test",
+    'author':"david hovsepian"
 
     'summary': "Short (1 phrase/line) summary of the module's purpose",
 
