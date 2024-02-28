@@ -1,14 +1,21 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields
 
+class VetAppAnimal(models.Model):
+    _name = 'vetapp.animal'
+    _description = 'Vet App Animal'
 
-# class vetapp(models.Model):
-#     _name = 'vetapp.vetapp'
-#     _description = 'vetapp.vetapp'
+    name = fields.Char(string='Name')
+    value = fields.Integer(string='Value')
+    breed = fields.Char(string='Breed')
+    birthdate = fields.Date(string='Birthdate')
+    notes = fields.Text(string='Notes')
+    other = fields.Text(string='Other')
 
-#     name = fields.Char()
-#     value = fields.Integer()
+   
+   
+
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
 #
