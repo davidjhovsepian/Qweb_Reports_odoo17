@@ -19,12 +19,23 @@
       <field name="model">vetapp.animal</field>
       <field name="report_type">qweb-pdf</field>
       <field name="report_name">vetapp.report_animals</field>
-      <field name="report_file">vetapp.report_animals</field>
+      <field name="report_file">vetapp.report_animals_template</field> <!-- Updated report_file value -->
       <field name="binding_model_id" ref="model_vetapp_animal"/>
       <field name="binding_type">report</field>
     </record>
 
-    <!-- Define server action -->
+
+   <template id="vetapp.report_animals">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+               <h2>Animal Name: <t t-esc="doc.name"/></h2>
+            </t>
+        </t>
+   </template>
+
+
+
+    <!-- Define server action to print the report -->
     <record model="ir.actions.server" id="vetapp.action_print_report_animal">
       <field name="name">Print Animals Report</field>
       <field name="model_id" ref="model_vetapp_animal"/>
@@ -45,8 +56,6 @@
     <menuitem name="Owners" id="vetapp.menu_2_owners" parent="vetapp.menu_2"
               action="vetapp.action_window_owners"/>
         
-
-
     <!-- Add print button to the report menu -->
     <menuitem name="Animals Report" id="vetapp.menu_1_print_report" parent="vetapp.menu_1"
               action="vetapp.action_print_report_animal"/>
