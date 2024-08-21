@@ -1725,6 +1725,7 @@ class WebsiteSale(payment_portal.PaymentPortal):
         errors = []
 
         if not order.only_services and not order._get_delivery_methods():
+            _logger.warning("---------shipping messed up------------")
             errors.append((
                 _('Sorry, we are unable to ship your order'),
                 _('No shipping method is available for your current order and shipping address. '

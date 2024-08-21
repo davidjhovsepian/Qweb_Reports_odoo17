@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="delete_edit_button" inherit_id="website_sale.address_kanban">
+        <xpath expr="//a[contains(@class, 'js_edit_address')]" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
+</odoo>

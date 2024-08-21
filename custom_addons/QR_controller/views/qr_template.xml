@@ -1,0 +1,10 @@
+<odoo>
+    <template id="qr_template">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Stock Transfer</h1>
+                <p>Your stock transfer has been validated.</p>
+            </div>
+        </t>
+    </template>
+</odoo>
